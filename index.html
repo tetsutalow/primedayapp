@@ -32,7 +32,8 @@ function sPrimeDays(year1, year2) {
   var days=[];
   var d1,d2;
   for (var y=year1; y<=year2; y++) {
-    if ( (y % 400 == 0) || (year % 100 != 0) && (year % 4 == 0) ) { 
+    console.log(y);
+    if ( (y % 400 == 0) || (y % 100 != 0) && (y % 4 == 0) ) { 
       days = [[131,201], [229,301], [331,401], [531,601], [731,801], [831,901], [1031, 1101]];
     } else {
       days = [[131,201], [331,401], [531,601], [731,801], [831,901], [1031, 1101]];
@@ -70,7 +71,7 @@ function show() {
   for (var i=0; i<spds.length; ++i) {
     var tr=document.createElement("tr");
     var td=document.createElement("td");
-    td.innerHTML=cpds[i];
+    td.innerHTML=spds[i];
     tr.appendChild(td);
     tbl.appendChild(tr);
   }
